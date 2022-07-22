@@ -19,9 +19,9 @@ function Filter({setActiveGenre, activeGenre, setFiltered, popular}) {
        <button className={activeGenre === 0 ? 'active' : ''}  onClick={() => setActiveGenre(0)}>All</button> 
        <button className={activeGenre === 35 ? 'active' : ''}  onClick={() => setActiveGenre(35)}>Comedy</button> 
        <button className={activeGenre === 28 ? 'active' : ''}  onClick={() => setActiveGenre(28)}>Thriller</button> 
-       <button className={activeGenre === 28 ? 'active' : ''}  onClick={() => setActiveGenre(28)}>Fantansy</button> 
-       <button className={activeGenre === 28 ? 'active' : ''}  onClick={() => setActiveGenre(28)}>Horror</button> 
-       <button className={activeGenre === 28 ? 'active' : ''}  onClick={() => setActiveGenre(28)}>Anime</button> 
+       <button className={activeGenre === 16 ? 'active' : ''}  onClick={() => setActiveGenre(16)}>Fantansy</button> 
+       <button className={activeGenre === 12 ? 'active' : ''}  onClick={() => setActiveGenre(12)}>Horror</button> 
+       <button className={activeGenre === 14 ? 'active' : ''}  onClick={() => setActiveGenre(14)}>Anime</button> 
     </div>
   )
 }

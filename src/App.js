@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Movie from '../src/components/Movie'
 import Filter from './components/Filter'
 import Navbar from './components/Navbar'
-import {motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function App() {
 
@@ -21,21 +21,21 @@ function App() {
     
     setPopular(movies.results)
     setFiltered(movies.results)
+    console.log(movies.results)
   }
 
   return (
     <div className="App">
       <Navbar />
+
       <Filter popular={popular} setFiltered={setFiltered} activeGenre={activeGenre} setActiveGenre={setActiveGenre}/>
-      <motion.div 
-        layout 
-        className='popular-movies'>
-       
-          {filtered.map(movie => {
-            return <Movie key='movie.id' movie={movie}/>
-          })}
-        
-      </motion.div>
+      <AnimatePresence>
+        <motion.div layout className='popular-movies'>
+            {filtered.map((movie) => {
+              return <Movie key={movie.id} movie={movie}/>
+            })}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
